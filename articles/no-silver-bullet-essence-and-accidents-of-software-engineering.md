@@ -1,4 +1,5 @@
 No Silver Bullet: Essence and Accidents of Software Engineering
+
 by Frederick P. Brooks, Jr. 
 
 Of all the monsters that fill the nightmares of our folklore, none terrify more than werewolves, because they transform unexpectedly from the familiar into horrors. For these, one seeks bullets of silver that can magically lay them to rest.
