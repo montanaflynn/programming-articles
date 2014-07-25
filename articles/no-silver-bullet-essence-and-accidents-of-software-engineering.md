@@ -1,6 +1,9 @@
-No Silver Bullet: Essence and Accidents of Software Engineering
+---
+author: Frederick P. Brooks, Jr.
+source: http://www.cs.nott.ac.uk/~cah/G51ISS/Documents/NoSilverBullet.html
+---
 
-by Frederick P. Brooks, Jr. 
+No Silver Bullet: Essence and Accidents of Software Engineering
 
 Of all the monsters that fill the nightmares of our folklore, none terrify more than werewolves, because they transform unexpectedly from the familiar into horrors. For these, one seeks bullets of silver that can magically lay them to rest.
 The familiar software project, at least as seen by the nontechnical manager, has something of this character; it is usually innocent and straightforward, but is capable of becoming a monster of missed schedules, blown budgets, and flawed products. So we hear desperate cries for a silver bullet--something to make software costs drop as rapidly as computer hardware costs do.
