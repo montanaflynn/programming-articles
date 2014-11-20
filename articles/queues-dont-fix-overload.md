@@ -1,5 +1,5 @@
 ---
-author: Ferd T-H
+author: Fred Hebert
 source: http://ferd.ca/queues-don-t-fix-overload.html
 ---
 
@@ -11,29 +11,29 @@ People misuse queues all the time. The most egregious case being to fix issues w
 
 To oversimplify things, most of the projects I end up working on can be visualized as a very large bathroom sink. User and data input are flowing from the faucet, down 'till the output of the system:
 
-![](https://raw.githubusercontent.com/montanaflynn/programming-articles/assets/img/sink1.png)
+![](https://raw.githubusercontent.com/montanaflynn/programming-articles/master/assets/img/sink1.png)
 
 So under normal operations, your system can handle all the data that comes in, and carry it out fine:
 
-![](https://raw.githubusercontent.com/montanaflynn/programming-articles/assets/img/sink2.png)
+![](https://raw.githubusercontent.com/montanaflynn/programming-articles/master/assets/img/sink2.png)
 
 Water goes in, water goes out, everyone's happy. However, from time to time, you'll see temporary overload on your system. If you do messaging, this is going to be around sporting events or events like New Year's Eve. If you're a news site, it's gonna be when a big thing happens (Elections in the US, Royal baby in the UK, someone says they dislike French as a language in Quebec).
 
 During that time, you may experience that temporary overload:
 
-![](https://raw.githubusercontent.com/montanaflynn/programming-articles/assets/img/sink3.png)
+![](https://raw.githubusercontent.com/montanaflynn/programming-articles/master/assets/img/sink3.png)
 
 The data that comes out of the system is still limited, and input comes in faster and faster. Web people will use stuff like caches at that point to make it so the input and output required gets to be reduced. Other systems will use a huge buffer (a queue, or in this case, a sink) to hold the temporary data.
 
 The problem comes when you inevitably encounter prolonged overload. It's when you look at your system load and go "oh crap", and it's not coming down ever. Turns out Obama doesn't want to turn in his birth certificate, the royal baby doesn't look like the father, and someone says Quebec should be better off with Parisian French, and the rumor mill is going for days and weeks at a time:
 
-![](https://raw.githubusercontent.com/montanaflynn/programming-articles/assets/img/sink4.png)
+![](https://raw.githubusercontent.com/montanaflynn/programming-articles/master/assets/img/sink4.png)
 
 All of a sudden, the buffers, queues, whatever, can't deal with it anymore. You're in a critical state where you can see smoke rising from your servers, or if in the cloud, things are as bad as usual, but more!
 
 The system inevitably crashes:
 
-![](https://raw.githubusercontent.com/montanaflynn/programming-articles/assets/img/sink5.png)
+![](https://raw.githubusercontent.com/montanaflynn/programming-articles/master/assets/img/sink5.png)
 
 Woops, everyone is dead, you're in the office at 3am (who knew so many people in the US, disgusted with their "Kenyan" president, now want news on the royal baby, while Quebec people look up 'royale with cheese baby' for some reason) trying to keep things up.
 
@@ -43,7 +43,7 @@ At the end of it, you see a crapload of problems still happening, but they're a 
 
 You go "okay I'm all out of ideas, let's buy a bigger server." The system in the end looks like this, and it's still failing:
 
-![](https://raw.githubusercontent.com/montanaflynn/programming-articles/assets/img/sink6.png)
+![](https://raw.githubusercontent.com/montanaflynn/programming-articles/master/assets/img/sink6.png)
 
 Except now it's an unmaintainable piece of garbage full of dirty hacks to make it work that cost 5 times what it used to, and you've been paid for months optimizing it for no god damn reason because it still dies when overloaded.
 
@@ -73,7 +73,7 @@ Except at some point the queue spills over, and you lose all of the data. There'
 
 And then it dies again. And nobody ever thought of that sneaky red arrow there:
 
-![](https://raw.githubusercontent.com/montanaflynn/programming-articles/assets/img/sink6.png)
+![](https://raw.githubusercontent.com/montanaflynn/programming-articles/master/assets/img/sink6.png)
 
 Maybe they do it without knowing, and decide to go with MongoDB because it's "faster than Postgres" (heh). Who knows.
 
@@ -87,7 +87,7 @@ And you know what's cool? If you identify these bottlenecks you have for real in
 
 Step 1. Identify the bottleneck. Step 2: ask the bottleneck for permission to pile more data in:
 
-![](https://raw.githubusercontent.com/montanaflynn/programming-articles/assets/img/sink7.png) ![](https://raw.githubusercontent.com/montanaflynn/programming-articles/assets/img/sink8.png)
+![](https://raw.githubusercontent.com/montanaflynn/programming-articles/master/assets/img/sink7.png) ![](https://raw.githubusercontent.com/montanaflynn/programming-articles/master/assets/img/sink8.png)
 Depending on where you put your probe, you can optimize for different levels of latency and throughput, but what you're going to do is define proper operational limits of your system.
 
 When people blindly apply a queue as a buffer, all they're doing is creating a bigger buffer to accumulate data that is in-flight, only to lose it sooner or later. You're making failures more rare, but you're making their magnitude worse.
