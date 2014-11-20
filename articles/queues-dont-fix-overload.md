@@ -88,6 +88,7 @@ And you know what's cool? If you identify these bottlenecks you have for real in
 Step 1. Identify the bottleneck. Step 2: ask the bottleneck for permission to pile more data in:
 
 ![](https://raw.githubusercontent.com/montanaflynn/programming-articles/master/assets/img/sink7.png) ![](https://raw.githubusercontent.com/montanaflynn/programming-articles/master/assets/img/sink8.png)
+
 Depending on where you put your probe, you can optimize for different levels of latency and throughput, but what you're going to do is define proper operational limits of your system.
 
 When people blindly apply a queue as a buffer, all they're doing is creating a bigger buffer to accumulate data that is in-flight, only to lose it sooner or later. You're making failures more rare, but you're making their magnitude worse.
