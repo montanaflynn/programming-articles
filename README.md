@@ -13,3 +13,5 @@ A repository for all the great articles I've read over the years to act as a bac
 [How To Become A Hacker](https://github.com/montanaflynn/programming-articles/blob/master/articles/how-to-become-a-hacker.md)
 
 [Queues Don't Fix Overload](https://github.com/montanaflynn/programming-articles/blob/master/articles/queues-dont-fix-overload.md)
+
+[Factors of flow](https://github.com/montanaflynn/programming-articles/blob/master/articles/factors-of-flow.md)
