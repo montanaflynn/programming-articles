@@ -3,6 +3,8 @@ author: Mike Hadlow
 source: http://mikehadlow.blogspot.com/2014/12/the-lava-layer-anti-pattern.html
 ---
 
+# The Lava Layer Anti-Pattern
+
 _TL:DR Successive, well intentioned, changes to architecture and technology throughout the lifetime of an application can lead to a fragmented and hard to maintain code base. Sometimes it is better to favour consistent legacy technology over fragmentation._
 
 An &#8216;anti-pattern&#8217; describes a commonly encountered pathology or problem in software development. The Lava Layer (or Lava Flow) anti-pattern is well documented ([here](http://www.antipatterns.com/lavaflow.htm) and [here](http://en.wikipedia.org/wiki/Lava_flow_(programming)) for example). It&#8217;s symptoms are a fragile and poorly understood codebase with a variety of different patterns and technologies used to solve the same problems in different places. I&#8217;ve seen this pattern many times in enterprise software. It&#8217;s especially prevalent in situations where the software is large, mission critical, long-lived and where there is high staff turn-over. In this post I want to show some of the ways that it occurs and how it&#8217;s often driven by a very human desire to improve the software.
