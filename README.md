@@ -17,3 +17,5 @@ A repository for all the great articles I've read over the years to act as a bac
 [Factors of flow](https://github.com/montanaflynn/programming-articles/blob/master/articles/factors-of-flow.md)
 
 [The Lava Layer Anti-Pattern](https://github.com/montanaflynn/programming-articles/blob/master/articles/the-lava-lair-antipattern.md)
+
+[Signs that you're a good programmer](https://github.com/montanaflynn/programming-articles/blob/master/articles/the-lava-lair-antipattern.md)
