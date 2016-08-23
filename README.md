@@ -19,3 +19,5 @@ A repository for all the great articles I've read over the years to act as a bac
 [The Lava Layer Anti-Pattern](https://github.com/montanaflynn/programming-articles/blob/master/articles/the-lava-lair-antipattern.md)
 
 [Signs that you're a good programmer](https://github.com/montanaflynn/programming-articles/blob/master/articles/the-lava-lair-antipattern.md)
+
+[How To Build Technical Wealth](https://github.com/montanaflynn/programming-articles/blob/master/articles/how-to-build-technical-wealth.md)
